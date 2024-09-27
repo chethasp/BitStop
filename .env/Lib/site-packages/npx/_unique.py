@@ -1,0 +1,74 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, Callable
+
+import numpy as np
+
+if TYPE_CHECKING:
+    from numpy.typing import ArrayLike
+
+
+def _unique_tol(
+    unique_fun: Callable,
+    a: ArrayLike,
+    tol: float,
+    **kwargs,
+) -> np.ndarray | tuple[np.ndarray, ...]:
+    a = np.asarray(a)
+    # compute 1/tol first. Difference:
+    #
+    #   int(3.3 / 0.1) = int(32.99999999999999) = 32
+    #   int(3.3 * (1.0 / 0.1)) = int(33.0) = 33
+    #
+    aint = (a * (1.0 / tol)).astype(int)
+
+    return_index = kwargs.pop("return_index", False)
+
+    _, idx, *out = unique_fun(aint, return_index=True, **kwargs)
+    unique_a = a[idx]
+
+    if return_index:
+        out = [idx, *out]
+
+    if len(out) == 0:
+        return unique_a
+
+    return (unique_a, *out)
+
+
+def unique(
+    a: ArrayLike,
+    tol: float = 0.0,
+    **kwargs,
+) -> np.ndarray | tuple[np.ndarray, ...]:
+    assert tol >= 0.0
+    if tol > 0.0:
+        return _unique_tol(np.unique, a, tol, **kwargs)
+
+    return np.unique(a, **kwargs)
+
+
+def unique_rows(a: ArrayLike, **kwargs) -> np.ndarray | tuple[np.ndarray, ...]:
+    # The numpy alternative `np.unique(a, axis=0)` is slow; cf.
+    # <https://github.com/numpy/numpy/issues/11136>.
+    a = np.asarray(a)
+
+    a_shape = a.shape
+    a = a.reshape(a.shape[0], np.prod(a.shape[1:], dtype=int))
+
+    b = np.ascontiguousarray(a).view(np.dtype((np.void, a.dtype.itemsize * a.shape[1])))
+    out = np.unique(b, **kwargs)
+
+    # out[0] are the sorted, unique rows
+    if isinstance(out, tuple):
+        out = list(out)
+        out[0] = out[0].view(a.dtype).reshape(out[0].shape[0], *a_shape[1:])
+        if len(out) > 1:
+            out[1] = out[1].flatten()
+        if len(out) > 2:
+            out[2] = out[2].flatten()
+        out = tuple(out)
+    else:
+        out = out.view(a.dtype).reshape(out.shape[0], *a_shape[1:])
+
+    return out
