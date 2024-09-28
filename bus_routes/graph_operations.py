@@ -28,6 +28,14 @@ class Node:
         connections_str = ', '.join([f"{neighbor.address} ({weight})" for neighbor, weight in self.connections.items()])
         return f"Node({self.address}, Weight={self.weight}, Connections=[{connections_str}])"
 
+    def get_coordinates():
+        # Example list of coordinates
+        return [
+            (40.7128, -74.0060),  # New York City
+            (34.0522, -118.2437), # Los Angeles
+            (41.8781, -87.6298),  # Chicago
+        ]
+
 # Example usage
 # Creating nodes
 node_a = Node("A", weight=5)
