@@ -2,7 +2,7 @@ import csv
 import random
 import numpy as np
 import networkx as nx
-from calculate_distances import get_duration
+from .calculate_distances import get_duration
 
 # Node and Graph classes
 class Node:
