@@ -7,7 +7,7 @@ export default function Landing() {
   return (
     <LandingLayout>
       <Hero
-        title="Bus faster, bus quicker"
+        title="A better way to bus."
         ctaText="Generate a route map"
       />
     </LandingLayout>

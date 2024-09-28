@@ -11,7 +11,7 @@ const Header = (props) => {
       align="center"
       justify="flex-start"
       w="100%"
-      mb={8}
+      mb={-20}
       p={8}
     >
 
@@ -25,7 +25,7 @@ const Header = (props) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-            <Text color={"green"} display="block" fontWeight="bold" fontSize={40}>
+            <Text color={"green"} display="block" fontWeight="bold" fontSize={40} fontFamily={"Trebuchet MS"} letterSpacing={-3}>
             bitstop    
             </Text>
         </Flex>
