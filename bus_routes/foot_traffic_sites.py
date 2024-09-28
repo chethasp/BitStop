@@ -83,5 +83,5 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
     return result
 
 
-get_foot_traffic_sites(80, "Atlanta, Georgia", 100, thanish_api_key4)
+get_foot_traffic_sites(80, "Atlanta, Georgia", 10, thanish_api_key4)
 

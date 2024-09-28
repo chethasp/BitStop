@@ -1,10 +1,11 @@
 import csv
 import requests
 import re
+from itertools import combinations
 
 def get_duration(lat1, lon1, lat2, lon2):
     api_url = 'https://api.distancematrix.ai/maps/api/distancematrix/json'
-    api_key = '1sI7IyZD6I2wf0fVzQX4kbmyFA2gvP8m9XJsgJR65UtkQttw9qegisPoMLLrvrT8'
+    api_key = 'DZcaf2zo1KNABT0bTsx3bewSrOQRjprkbSXSMu2jqpxQXwdQy6aVtGV9yAzQqxmL'
     params = {
         'origins': f'{lat1},{lon1}',
         'destinations': f'{lat2},{lon2}',
@@ -33,29 +34,37 @@ def get_duration(lat1, lon1, lat2, lon2):
     else:
         raise ValueError(f"Failed to fetch data from Distance Matrix API. Status code: {response.status_code}")
 
-def read_csv_and_calculate_duration(csv_file):
+def read_csv_and_calculate_durations(csv_file, output_file):
     with open(csv_file, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-        # Get the top 2 entries
-        locations = [next(reader) for _ in range(2)]
+        locations = list(reader)  # Read all entries
 
-        # Extract the relevant details
-        venue1 = locations[0]
-        venue2 = locations[1]
+        # Prepare to write results
+        with open(output_file, mode='w', newline='', encoding='utf-8') as output:
+            writer = csv.writer(output)
+            # Write the header row
+            writer.writerow([
+                'venue_name1', 'venue_address1', 'latitude1', 'longitude1',
+                'venue_name2', 'venue_address2', 'latitude2', 'longitude2',
+                'Duration (minutes)'
+            ]) 
+            
+            # Iterate over all unique pairs of locations
+            for venue1, venue2 in combinations(locations, 2):
+                name1, address1, lat1, lon1 = venue1['venue_name'], venue1['venue_address'], float(venue1['latitude']), float(venue1['longitude'])
+                name2, address2, lat2, lon2 = venue2['venue_name'], venue2['venue_address'], float(venue2['latitude']), float(venue2['longitude'])
 
-        name1, address1, lat1, lon1 = venue1['venue_name'], venue1['venue_address'], float(venue1['latitude']), float(venue1['longitude'])
-        name2, address2, lat2, lon2 = venue2['venue_name'], venue2['venue_address'], float(venue2['latitude']), float(venue2['longitude'])
+                print(f"Calculating travel duration between:\n1. {name1} ({address1})\n2. {name2} ({address2})")
 
-        # Print venue details
-        print(f"Calculating travel duration between:\n1. {name1} ({address1})\n2. {name2} ({address2})")
-        
-        # Calculate duration
-        duration = get_duration(lat1, lon1, lat2, lon2)
+                # Calculate duration
+                duration = get_duration(lat1, lon1, lat2, lon2)
 
-        # Print the result
-        print(f"Duration: {duration} minutes")
+                # Print and write the result
+                print(f"Duration: {duration} minutes")
+                writer.writerow([name1, address1, lat1, lon1, name2, address2, lat2, lon2, duration])
 
 if __name__ == "__main__":
-    CSV_FILE = 'static/foot_traffic_sites.csv'  # Adjust the path if necessary
+    CSV_FILE = 'static/foot_traffic_sites.csv'  # Input CSV file
+    OUTPUT_FILE = 'static/durations.csv'         # Output CSV file
 
-    read_csv_and_calculate_duration(CSV_FILE)
+    read_csv_and_calculate_durations(CSV_FILE, OUTPUT_FILE)
