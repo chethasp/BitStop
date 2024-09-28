@@ -1,8 +1,7 @@
-from django.urls import path 
-from . import views 
+from django.urls import path
+from . import views
 
-#URLConf
-
-urlpattern = [
+# URLConf
+urlpatterns = [
     path('getlocations/', views.locations)
 ]

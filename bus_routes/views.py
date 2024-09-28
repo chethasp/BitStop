@@ -1,8 +1,7 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
 from django.http import JsonResponse
 
-from bus_routes import Node
+from bus_routes.graph_operations import Node  # Importing Node from graph_operations.py
 
 # Create your views here.
 
@@ -11,4 +10,3 @@ def locations(request):
 
     # Return the list of coordinates as a JSON response
     return JsonResponse({'coordinates': coordinates})
-     
