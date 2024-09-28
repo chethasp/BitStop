@@ -1,5 +1,14 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, Marker, DirectionsRenderer, useJsApiLoader } from '@react-google-maps/api';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  Input
+} from "@chakra-ui/react";
 
 // Set the initial center of the map
 const center = {
@@ -60,20 +69,39 @@ const MapComponent = () => {
 
   return (
     <div>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onClick={(e) => addMarker({ lat: e.latLng.lat(), lng: e.latLng.lng() })}
+      <Text color={"green"} display="block" fontWeight="bold" fontSize={40} fontFamily={"Trebuchet MS"} letterSpacing={-3}>
+        route map
+      </Text>
+
+      <Box borderWidth="5px" borderColor="green.500" borderRadius="lg" overflow="hidden">
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={10}
+          onClick={(e) => addMarker({ lat: e.latLng.lat(), lng: e.latLng.lng() })}
+        >
+          {markers.map((marker, index) => (
+            <Marker key={index} position={marker} />
+          ))}
+          {directionsResponse && <DirectionsRenderer directions={directionsResponse} />}
+        </GoogleMap>
+      </Box>
+
+      <Button
+        colorScheme="primary"
+        backgroundColor="green"
+        borderRadius="5px"
+        py="4"
+        px="4"
+        lineHeight="1"
+        size="md"
+        fontFamily={"Trebuchet MS"} 
+        letterSpacing={-0.5}
+        onClick={() => setMarkers([])}
+        mt={3}
       >
-        {markers.map((marker, index) => (
-          <Marker key={index} position={marker} />
-        ))}
-        {directionsResponse && <DirectionsRenderer directions={directionsResponse} />}
-      </GoogleMap>
-      <div>
-        <button onClick={() => setMarkers([])}>Clear Markers</button>
-      </div>
+        Clear Markers
+      </Button>
     </div>
   );
 };

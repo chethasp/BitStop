@@ -24,17 +24,6 @@ export default function LandingLayout(props) {
       <Header />
       {props.children}
 
-      <div>
-      <Text as="h1"
-          size="xl"
-          fontWeight="bold"
-          color="primary.800"
-          textAlign={["center", "center", "left", "left"]}
-          fontFamily={"Trebuchet MS"} 
-          letterSpacing={-3}
-      >Bus Routes</Text>
-      <MapComponent />
-      </div>
 
     </Flex>
     
