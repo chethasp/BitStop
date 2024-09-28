@@ -1,5 +1,8 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, Marker, DirectionsRenderer, useJsApiLoader } from '@react-google-maps/api';
+import Papa from "papaparse";
+import footTrafficData from "../../files/foot_traffic_sites.csv"; 
+<<<<<<< Updated upstream
 import {
   Box,
   Button,
@@ -9,6 +12,8 @@ import {
   Text,
   Input
 } from "@chakra-ui/react";
+=======
+>>>>>>> Stashed changes
 
 // Set the initial center of the map
 const center = {
@@ -39,22 +44,23 @@ const MapComponent = () => {
       return;
     }
 
-    const directionsService = new window.google.maps.DirectionsService();
-    directionsService.route(
+    //const directionsService = new window.google.maps.DirectionsService();
+    /**directionsService.route(
       {
         origin: markers[0],
         destination: markers[markers.length - 1],
         waypoints: markers.slice(1, -1).map((marker) => ({ location: marker, stopover: true })),
-        travelMode: window.google.maps.TravelMode.DRIVING,
+        //travelMode: window.google.maps.TravelMode.DRIVING,
       },
-      (result, status) => {
-        if (status === window.google.maps.DirectionsStatus.OK) {
-          setDirectionsResponse(result);
-        } else {
-          console.error(`Error fetching directions ${result}`);
-        }
-      }
+      //(result, status) => {
+        //if (status === window.google.maps.DirectionsStatus.OK) {
+          //setDirectionsResponse(result);
+        //} else {
+          //console.error(`Error fetching directions ${result}`);
+        //}
+      //}
     );
+    */
   }, [markers]);
 
   useEffect(() => {
@@ -62,6 +68,26 @@ const MapComponent = () => {
       calculateRoute();
     }
   }, [markers, calculateRoute]);
+
+  useEffect(() => {
+    // Fetch and parse the CSV data
+    fetch(footTrafficData) // Update with the correct path to the CSV file
+    .then(response => response.text())
+    .then(csvText => {
+        Papa.parse(csvText, {
+        header: false, // The CSV you provided doesn't have headers
+        complete: (results) => {
+            const data = results.data;
+            // Extract only the name and address (first and second columns)
+            const placeList = data.map(row => ({
+            lat: parseFloat(row[2]),
+            lng: parseFloat(row[3]),
+            }));
+            setMarkers(placeList);
+        },
+        });
+    });
+}, []);
 
   if (!isLoaded) {
     return <div>Loading...</div>;
