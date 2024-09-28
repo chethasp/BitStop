@@ -1,3 +1,5 @@
 requests
 djangorestframework
 django-cors-headers
+networkx
+pandas
