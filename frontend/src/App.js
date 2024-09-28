@@ -1,11 +1,23 @@
 import './App.css';
 import { ChakraProvider, Box, Flex, Text } from '@chakra-ui/react';
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Landing from "./pages/Landing";
+
 function App() {
   return (
-    <Flex direction="column" height="100vh">
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />}>
+        </Route>
+      </Routes>
+    </Router>
+
+    /*
+    <Flex direction="column" height="100vh" className='main'>
       <Box bg="teal.500" color="white" p={4}>
-        <Text fontSize="xl" textAlign="left">BITSTOP</Text>
+        <Text fontSize="xl" textAlign="left" >BITSTOP</Text>
       </Box>
 
       <Flex flex="1">
@@ -21,6 +33,7 @@ function App() {
         </Box>
       </Flex>
     </Flex>
+    */
   );
 }
 
