@@ -1,4 +1,6 @@
 import csv
+from calculate_distances import get_distance
+
 
 class Node:
     def __init__(self, name, address, latitude, longitude, weight=0):
@@ -31,14 +33,3 @@ class Graph:
         return self.edges[name1][name2]
 
 graph = Graph()
-
-with open('static/foot_traffic_sites.csv', mode ='r')as file:
-    csvFile = csv.reader(file)
-    for lines in csvFile:
-        if (lines[0] != 'venue_name'):
-            graph.add_node(lines[0], lines[1], 1, lines[2], lines[3])
-            for node in graph.nodes:
-                graph.add_edge(lines[0], graph.nodes[node].name, 1)
-
-print(graph.nodes.keys())
-print(graph.edges.values())

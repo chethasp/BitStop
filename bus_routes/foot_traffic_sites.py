@@ -14,7 +14,7 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
 
     params = {
         'api_key_private': api_key,
-        'q': 'busy places in {location}'.format(location = city),
+        'q': 'popular places in {location}'.format(location = city),
         'num': place_amt,
         'fast': False,
         'format': 'none',
@@ -62,11 +62,14 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
 
     print("\n\ngetting top {count} places with footraffic over {pct}% in {location}: \n".format(count=place_amt, pct=min_business, location=city))
 
-    result = [['venue_name', 'venue_address', 'latitude', 'longitude']]
+    result = [['venue_name', 'venue_address', 'latitude', 'longitude', 'foot_traffic']]
+
+    counter = 1
 
     for venue in results_arr:
         print(venue['venue_name'] + ": " + venue['venue_address'] + '\n')
-        result.append([venue['venue_name'], venue['venue_address'], venue['venue_lat'], venue['venue_lon']])
+        result.append([venue['venue_name'], venue['venue_address'], venue['venue_lat'], venue['venue_lon'], counter])
+        counter += 1
 
 
     with open('static/foot_traffic_sites.csv', 'w', newline='') as csvfile:
@@ -80,5 +83,5 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
     return result
 
 
-get_foot_traffic_sites(80, "Atlanta, Georgia", 100, thanish_api_key4);
+get_foot_traffic_sites(80, "Atlanta, Georgia", 100, thanish_api_key4)
 

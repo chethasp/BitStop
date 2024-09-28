@@ -16,7 +16,7 @@ def get_distance(lat1, lon1, lat2, lon2, api_key):
         if data['status'] == "OK":
             distance = data['rows'][0]['elements'][0]['distance']['text']
             duration = data['rows'][0]['elements'][0]['duration']['text']
-            return distance, duration
+            return distance , duration
         else:
             raise ValueError(f"Error from API: {data['status']}")
     else:
