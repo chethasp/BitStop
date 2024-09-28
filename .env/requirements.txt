@@ -1,7 +1,3 @@
 requests
-<<<<<<< Updated upstream
 djangorestframework
 django-cors-headers
-=======
-jsons
->>>>>>> Stashed changes
