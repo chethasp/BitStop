@@ -76,7 +76,22 @@ export default function UserEntry({
           <Input placeholder="Enter a city name" />
           <Input placeholder="Enter number of routes" type="number"/>
         </Stack>
-        
+
+          <flex direction='rows'>
+          <Button
+            colorScheme="primary"
+            backgroundColor="green"
+            borderRadius="8px"
+            py="4"
+            px="4"
+            lineHeight="1"
+            size="md"
+            fontFamily={"Trebuchet MS"} 
+            letterSpacing={-0.5}
+            mr={4}
+          >
+            Generate Routes
+          </Button>
           <Button
             colorScheme="primary"
             backgroundColor="green"
@@ -88,8 +103,9 @@ export default function UserEntry({
             fontFamily={"Trebuchet MS"} 
             letterSpacing={-0.5}
           >
-            {ctaText}
+            Display Routes
           </Button>
+          </flex>
 
       <Flex align="center" direction={{ base: "column", md: "row" }}>
       <Stack spacing={4} w="100%">
