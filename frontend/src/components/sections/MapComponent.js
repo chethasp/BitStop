@@ -214,13 +214,7 @@ const MapComponent = () => {
 
 
 <Heading
-    as="h1"
-    size="xl"
-    fontWeight="bold"
-    color="primary.800"
-    textAlign={["center", "center", "left", "left"]}
-    fontFamily={"Trebuchet MS"} 
-    letterSpacing={0.5}
+    color={"green"} display="block" fontWeight="bold" fontSize={40} fontFamily={"Trebuchet MS"} letterSpacing={-3}
   >
     Suggest a Stop
   </Heading>

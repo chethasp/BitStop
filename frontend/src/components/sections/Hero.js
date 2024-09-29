@@ -188,14 +188,14 @@ export default function UserEntry({
         overflowY="auto" 
         maxH="70vh" 
       >
-        <Heading as="h3" size="md" mb={4}>
+        <Heading as="h3" size="lg" mb={4} fontFamily={"Trebuchet MS"} letterSpacing={-1}>
           Available Stops
         </Heading>
         <Stack spacing={3}>
           {places.map((place, index) => (
             <Box key={index} p={2} borderBottom="1px solid" borderColor="gray.200">
-              <Text fontWeight="bold">{place.name}</Text>
-              <Text>{place.address}</Text>
+              <Text fontWeight="bold" fontFamily={"Trebuchet MS"} letterSpacing={-0.5} fontSize={20}>{place.name}</Text>
+              <Text fontFamily={"Trebuchet MS"} letterSpacing={-1} fontSize = {15}>{place.address}</Text>
             </Box>
           ))}
         </Stack>
