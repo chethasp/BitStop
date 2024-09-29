@@ -1,19 +1,11 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from bus_routes.graph_operations import Node  # Importing Node from graph_operations.py
-
 from bus_routes.googlecoords import get_lat_long
 
 from django.views.decorators.http import require_GET
 
 # Create your views here.
-
-def locations(request):
-    coordinates = Node.get_coordinates()
-
-    # Return the list of coordinates as a JSON response
-    return JsonResponse({'coordinates': coordinates})
 
 @require_GET
 def get_lat_long_view(request):
