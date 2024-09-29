@@ -5,7 +5,11 @@ import footTrafficData from "../../files/foot_traffic_sites.csv";
 import {
   Box,
   Button,
-  Text
+  Text,
+  Flex,
+  Stack,
+  Input,
+  Heading
 } from "@chakra-ui/react";
 import axios from "axios"
 
