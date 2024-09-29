@@ -27,8 +27,11 @@ export default function UserEntry({
     //Handle latlong
     const [email, setEmail] = useState("");
     const [address, setAddress] = useState("");
-    const [latLong, setLatLong] = useState(null);  
+    const [latLong, setLatLong] = useState("");  
     const [error, setError] = useState("");
+    // handle generate routes
+    const [city, setCity] = useState('');
+    const [amount, setAmount] = useState('');
 
     const handleSubmit = () => {
       setLatLong(null);
@@ -51,6 +54,30 @@ export default function UserEntry({
       });
     };
 
+    const handleGenerateStopsClick = () => {
+
+      const params = {
+        'city': city, // Value from the city input field
+        'amount': amount, // Value from the number input field
+      };
+
+      console.log(params)
+  
+      // Make an API request using Axios
+      axios.get('http://localhost:8000/bus_routes/generate_foot_traffic_sites/', { params })
+        .then(response => {
+          // Handle the response from the API
+          console.log('API Response:', response.data);
+          // You can now use this data to update your state or display on the UI
+        })
+        .catch(error => {
+          // Handle any errors from the API request
+          console.error('Error fetching routes:', error);
+        });
+
+
+    }
+
     useEffect(() => {
         // Fetch and parse the CSV data
         fetch(footTrafficData) // Update with the correct path to the CSV file
@@ -60,8 +87,9 @@ export default function UserEntry({
             header: false, // The CSV you provided doesn't have headers
             complete: (results) => {
                 const data = results.data;
+                const filtered_data = data.slice(1)
                 // Extract only the name and address (first and second columns)
-                const placeList = data.map(row => ({
+                const placeList = filtered_data.map(row => ({
                 name: row[0],
                 address: row[1],
                 }));
@@ -101,8 +129,10 @@ export default function UserEntry({
         
         {/* User Entry Boxes */}
         <Stack spacing={4} w="100%">
-          <Input placeholder="Enter a city name" />
-          <Input placeholder="Enter number of routes" type="number"/>
+          <Input placeholder="Enter a city name" value={city}
+            onChange={(e) => setCity(e.target.value) }/>
+          <Input placeholder="Enter number of stops" type="number" variantalue={amount}
+            onChange={(e) => setAmount(e.target.value)}/>
         </Stack>
 
           <flex direction='rows'>
@@ -117,6 +147,7 @@ export default function UserEntry({
             fontFamily={"Trebuchet MS"} 
             letterSpacing={-0.5}
             mr={4}
+            onClick={handleGenerateStopsClick}
           >
             Generate Routes
           </Button>
@@ -138,45 +169,9 @@ export default function UserEntry({
       <Flex align="center" direction={{ base: "column", md: "row" }}>
       <Stack spacing={4} w="100%">
 
-      <br></br>
+    
 
-      <Heading
-          as="h1"
-          size="xl"
-          fontWeight="bold"
-          color="primary.800"
-          textAlign={["center", "center", "left", "left"]}
-          fontFamily={"Trebuchet MS"} 
-          letterSpacing={0.5}
-        >
-          Suggest a Stop
-        </Heading>
-          <Input placeholder="Email" value={email}
-            onChange={(e) => setEmail(e.target.value)}/>
-          <Input placeholder="Address of Stop" value={address}
-            onChange={(e) => setAddress(e.target.value)}/>
-        
-        <Button
-            colorScheme="primary"
-            backgroundColor="green"
-            borderRadius="8px"
-            py="4"
-            px="4"
-            lineHeight="1"
-            size="md"
-            fontFamily={"Trebuchet MS"} 
-            letterSpacing={-0.5}
-            onClick={handleSubmit}
-          >
-            Submit
-          </Button>
 
-          {latLong && (
-            <Box mt={4}>
-              <Text>Latitude: {latLong.latitude}</Text>
-              <Text>Longitude: {latLong.longitude}</Text>
-            </Box>
-          )}
           
           </Stack>
         </Flex>

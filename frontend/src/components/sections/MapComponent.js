@@ -11,9 +11,10 @@ import {
   Text,
   Input
 } from "@chakra-ui/react";
+import axios from "axios"
 
 // Set the initial center of the map
-const center = {
+let center = {
   lat: 33.7501,  
   lng: -84.3885, 
 };
@@ -31,6 +32,16 @@ const MapComponent = () => {
 
   const [directionsResponse, setDirectionsResponse] = useState(null);
   const [markers, setMarkers] = useState([]);
+  const [places, setPlaces] = useState([]);
+
+  //Handle latlong
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
+  const [latLong, setLatLong] = useState(null);  
+  const [error, setError] = useState("");
+  // handle generate routes
+  const [city, setCity] = useState('');
+  const [amount, setAmount] = useState('');
 
   const addMarker = (location) => {
     setMarkers((current) => [...current, location]);
@@ -80,6 +91,7 @@ const MapComponent = () => {
             lat: parseFloat(row[2]),
             lng: parseFloat(row[3]),
             }));
+            center = {lat: placeList.at(1).lat, lng: placeList.at(1).lng}
             setMarkers(placeList);
         },
         });
@@ -90,8 +102,36 @@ const MapComponent = () => {
     return <div>Loading...</div>;
   }
 
+  
+
+  const handleSubmit = () => {
+    setLatLong(null);
+    setError("")
+    console.log("button clicked")
+
+    // Make an Axios GET request to your Django API
+    axios.get('http://localhost:8000/bus_routes/get_lat_long/', { 
+        params: { address } 
+    })
+    .then(response => {
+        const { latitude, longitude } = response.data;
+        addMarker({ lat: latitude, lng: longitude })
+        center = {lat: latitude, lng: longitude}
+        setLatLong({ latitude, longitude });  
+    })
+    .catch(error => {
+        if (error.response) {
+            setError(error.response.data.error); 
+        } else {
+            setError("An unexpected error occurred.");
+        }
+    });
+  };
+
   return (
+
     <div>
+
       <Text color={"green"} display="block" fontWeight="bold" fontSize={40} fontFamily={"Trebuchet MS"} letterSpacing={-3}>
         route map
       </Text>
@@ -101,7 +141,7 @@ const MapComponent = () => {
           mapContainerStyle={containerStyle}
           center={center}
           zoom={10}
-          onClick={(e) => addMarker({ lat: e.latLng.lat(), lng: e.latLng.lng() })}
+          //onClick={(e) => addMarker({ lat: e.latLng.lat(), lng: e.latLng.lng() })}
         >
           {markers.map((marker, index) => (
             <Marker key={index} position={marker} />
@@ -125,6 +165,51 @@ const MapComponent = () => {
       >
         Clear Markers
       </Button>
+      <box borderWidth="5px" borderColor="green.500" borderRadius="lg" overflow="hidden">
+
+      <Flex align="center" direction={{ base: "column", md: "row" }}>
+      <Stack spacing={4} w="100%">
+
+      <br></br>
+  
+
+
+<Heading
+    as="h1"
+    size="xl"
+    fontWeight="bold"
+    color="primary.800"
+    textAlign={["center", "center", "left", "left"]}
+    fontFamily={"Trebuchet MS"} 
+    letterSpacing={0.5}
+  >
+    Suggest a Stop
+  </Heading>
+    <Input placeholder="Email" value={email}
+      onChange={(e) => setEmail(e.target.value)}/>
+    <Input placeholder="Address of Stop" value={address}
+      onChange={(e) => setAddress(e.target.value)}/>
+  
+  <Button
+      colorScheme="primary"
+      backgroundColor="green"
+      borderRadius="8px"
+      py="4"
+      px="4"
+      lineHeight="1"
+      size="md"
+      fontFamily={"Trebuchet MS"} 
+      letterSpacing={-0.5}
+      onClick={handleSubmit}
+    >
+      Submit
+    </Button>
+
+    </Stack>
+
+</Flex>
+</box>
+
     </div>
   );
 };

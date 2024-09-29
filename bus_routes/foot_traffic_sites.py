@@ -7,8 +7,12 @@ thanish_api_key = 'pri_12a0e8c578af422d9279c8cf3cc36970'
 thanish_api_key2 = 'pri_b22c7fdcc1c64ffb81bc9365bbba2640'
 thanish_api_key3 = 'pri_632cd4c106bb49ecaf9cd44f616c7cc4'
 thanish_api_key4 = 'pri_93f8fa30e75c4464a21f573c02608c29'
+thanish_api_key5 = 'pri_a5e28de1eafb4c9bad6453f8913bad15'
 
 def get_foot_traffic_sites(min_business, city, place_amt, api_key):
+
+    print(city + '\n')
+    print(place_amt)
 
     initial_search_url = "https://besttime.app/api/v1/venues/search"
 
@@ -76,12 +80,15 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
         writer = csv.writer(csvfile)
         writer.writerows(result)
 
-    with open('static/previous_collections.csv', 'w', newline='') as csvfile:
+    with open('frontend/src/files/foot_traffic_sites.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow([params['q'], params2['collection_id']])
+        writer.writerows(result)
 
     return result
 
+def get_sites(city, amount):
+    get_foot_traffic_sites(80, city, amount, thanish_api_key5)
 
-get_foot_traffic_sites(80, "Atlanta, Georgia", 10, thanish_api_key4)
+if __name__ == '__main__':
+    get_foot_traffic_sites(80, "Atlanta, Georgia", 10, thanish_api_key4)
 

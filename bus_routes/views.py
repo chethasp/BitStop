@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 from bus_routes.googlecoords import get_lat_long
+from bus_routes.foot_traffic_sites import get_sites
 
 from django.views.decorators.http import require_GET
 
@@ -19,3 +20,9 @@ def get_lat_long_view(request):
         return JsonResponse({'latitude': lat, 'longitude': lng})
     else:
         return JsonResponse({'error': 'Could not retrieve coordinates.'}, status=500)
+    
+def get_foot_traffic_data(request):
+    city = request.GET.get('city')
+    amount = request.GET.get('amount')
+    get_sites(city, amount)
+    return JsonResponse({'routes generated?': 'true'})
