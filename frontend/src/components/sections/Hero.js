@@ -1,5 +1,6 @@
 import React,  { useState, useEffect } from "react";
 import Papa from "papaparse";
+import axios from "axios";
 import footTrafficData from "../../files/foot_traffic_sites.csv"; 
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -22,6 +23,33 @@ export default function UserEntry({
 }) {
 
     const [places, setPlaces] = useState([]);
+
+    //Handle latlong
+    const [email, setEmail] = useState("");
+    const [address, setAddress] = useState("");
+    const [latLong, setLatLong] = useState(null);  
+    const [error, setError] = useState("");
+
+    const handleSubmit = () => {
+      setLatLong(null);
+      setError("");
+
+      // Make an Axios GET request to your Django API
+      axios.get('http://localhost:8000/bus_routes/get_lat_long/', { 
+          params: { address } 
+      })
+      .then(response => {
+          const { latitude, longitude } = response.data;
+          setLatLong({ latitude, longitude });  
+      })
+      .catch(error => {
+          if (error.response) {
+              setError(error.response.data.error); 
+          } else {
+              setError("An unexpected error occurred.");
+          }
+      });
+    };
 
     useEffect(() => {
         // Fetch and parse the CSV data
@@ -123,8 +151,10 @@ export default function UserEntry({
         >
           Suggest a Stop
         </Heading>
-          <Input placeholder="Email" />
-          <Input placeholder="Address of Stop" type="number"/>
+          <Input placeholder="Email" value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
+          <Input placeholder="Address of Stop" value={address}
+            onChange={(e) => setAddress(e.target.value)}/>
         
         <Button
             colorScheme="primary"
@@ -136,9 +166,18 @@ export default function UserEntry({
             size="md"
             fontFamily={"Trebuchet MS"} 
             letterSpacing={-0.5}
+            onClick={handleSubmit}
           >
             Submit
           </Button>
+
+          {latLong && (
+            <Box mt={4}>
+              <Text>Latitude: {latLong.latitude}</Text>
+              <Text>Longitude: {latLong.longitude}</Text>
+            </Box>
+          )}
+          
           </Stack>
         </Flex>
       </Stack>
