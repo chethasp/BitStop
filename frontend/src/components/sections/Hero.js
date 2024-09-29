@@ -181,12 +181,13 @@ export default function UserEntry({
         w={{ base: "100%", md: "40%" }} 
         mt={{ base: 8, md: 0 }} 
         p={4}
-        borderWidth="1px"
+        borderWidth="4px"
         borderRadius="lg"
         boxShadow="lg"
         bg="gray.50"
         overflowY="auto" 
         maxH="70vh" 
+        borderColor={"green"}
       >
         <Heading as="h3" size="lg" mb={4} fontFamily={"Trebuchet MS"} letterSpacing={-1}>
           Available Stops

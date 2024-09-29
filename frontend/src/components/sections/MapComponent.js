@@ -234,6 +234,7 @@ const MapComponent = () => {
       fontFamily={"Trebuchet MS"} 
       letterSpacing={-0.5}
       onClick={handleSubmit}
+      mb={4}
     >
       Submit
     </Button>
