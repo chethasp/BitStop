@@ -5,11 +5,7 @@ import footTrafficData from "../../files/foot_traffic_sites.csv";
 import {
   Box,
   Button,
-  Flex,
-  Heading,
-  Stack,
-  Text,
-  Input
+  Text
 } from "@chakra-ui/react";
 import axios from "axios"
 
@@ -24,13 +20,16 @@ const containerStyle = {
   height: '400px',
 };
 
+// Define some colors for the routes
+const routeColors = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF'];
+
 const MapComponent = () => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyCUqJZsnM7GrrpcRbRaaEeTpVYERjBNxgs', 
+    googleMapsApiKey: 'AIzaSyCfPMzELQgSjAnG9GkiMyeef8TL7gTycF4', 
     libraries: ['places'],
   });
 
-  const [directionsResponse, setDirectionsResponse] = useState(null);
+  const [directionsResponses, setDirectionsResponses] = useState([]);
   const [markers, setMarkers] = useState([]);
   const [places, setPlaces] = useState([]);
 
@@ -47,56 +46,76 @@ const MapComponent = () => {
     setMarkers((current) => [...current, location]);
   };
 
-  const calculateRoute = useCallback(() => {
-    if (markers.length < 2) {
-      return;
+  const calculateRoutes = useCallback(() => {
+    if (!isLoaded) {
+      console.error("Google Maps API not loaded yet.");
+      return; // Ensure the API is loaded
     }
 
-    //const directionsService = new window.google.maps.DirectionsService();
-    /**directionsService.route(
-      {
-        origin: markers[0],
-        destination: markers[markers.length - 1],
-        waypoints: markers.slice(1, -1).map((marker) => ({ location: marker, stopover: true })),
-        //travelMode: window.google.maps.TravelMode.DRIVING,
-      },
-      //(result, status) => {
-        //if (status === window.google.maps.DirectionsStatus.OK) {
-          //setDirectionsResponse(result);
-        //} else {
-          //console.error(`Error fetching directions ${result}`);
-        //}
-      //}
-    );
-    */
-  }, [markers]);
+    if (markers.length < 2) {
+      console.warn("Not enough markers to calculate routes.");
+      return; // Need at least two markers to calculate a route
+    }
+
+    const directionsService = new window.google.maps.DirectionsService();
+    const responses = []; // Store all responses for multiple routes
+
+    // Iterate through markers to calculate routes between each consecutive pair
+    for (let index = 0; index < markers.length - 1; index++) {
+      const origin = markers[index];
+      const destination = markers[index + 1];
+
+      console.log(`Calculating route from ${JSON.stringify(origin)} to ${JSON.stringify(destination)}`);
+
+      directionsService.route(
+        {
+          origin: origin,
+          destination: destination,
+          travelMode: window.google.maps.TravelMode.DRIVING,
+        },
+        (result, status) => {
+          if (status === window.google.maps.DirectionsStatus.OK) {
+            console.log(`Successfully fetched directions from ${origin} to ${destination}`);
+            responses.push({ result, color: routeColors[index % routeColors.length] });
+            if (responses.length === markers.length - 1) { // All routes calculated
+              setDirectionsResponses(responses);
+            }
+          } else {
+            console.error(`Error fetching directions from ${origin} to ${destination}: ${status}`);
+          }
+        }
+      );
+    }
+  }, [markers, isLoaded]);
 
   useEffect(() => {
     if (markers.length > 1) {
-      calculateRoute();
+      calculateRoutes();
     }
-  }, [markers, calculateRoute]);
+  }, [markers, calculateRoutes]);
 
   useEffect(() => {
     // Fetch and parse the CSV data
     fetch(footTrafficData) // Update with the correct path to the CSV file
     .then(response => response.text())
     .then(csvText => {
-        Papa.parse(csvText, {
+      Papa.parse(csvText, {
         header: false, // The CSV you provided doesn't have headers
         complete: (results) => {
-            const data = results.data;
-            // Extract only the name and address (first and second columns)
-            const placeList = data.map(row => ({
+          const data = results.data;
+          // Extract only the latitude and longitude (third and fourth columns)
+          const placeList = data.map(row => ({
             lat: parseFloat(row[2]),
             lng: parseFloat(row[3]),
-            }));
+          })).filter(place => !isNaN(place.lat) && !isNaN(place.lng)); // Ensure valid coordinates
+
+          console.log("Markers from CSV:", placeList);
             center = {lat: placeList.at(1).lat, lng: placeList.at(1).lng}
-            setMarkers(placeList);
+          setMarkers(placeList);
         },
-        });
+      });
     });
-}, []);
+  }, []);
 
   if (!isLoaded) {
     return <div>Loading...</div>;
@@ -133,7 +152,7 @@ const MapComponent = () => {
     <div>
 
       <Text color={"green"} display="block" fontWeight="bold" fontSize={40} fontFamily={"Trebuchet MS"} letterSpacing={-3}>
-        route map
+        Route Map
       </Text>
 
       <Box borderWidth="5px" borderColor="green.500" borderRadius="lg" overflow="hidden">
@@ -146,7 +165,20 @@ const MapComponent = () => {
           {markers.map((marker, index) => (
             <Marker key={index} position={marker} />
           ))}
-          {directionsResponse && <DirectionsRenderer directions={directionsResponse} />}
+
+          {/* Render directions for each route */}
+          {directionsResponses.map((directions, index) => (
+            <DirectionsRenderer
+              key={index}
+              directions={directions.result}
+              options={{
+                polylineOptions: {
+                  strokeColor: directions.color,
+                  strokeWeight: 4,
+                },
+              }}
+            />
+          ))}
         </GoogleMap>
       </Box>
 
@@ -160,7 +192,10 @@ const MapComponent = () => {
         size="md"
         fontFamily={"Trebuchet MS"} 
         letterSpacing={-0.5}
-        onClick={() => setMarkers([])}
+        onClick={() => {
+          setMarkers([]);
+          setDirectionsResponses([]); // Clear directions when clearing markers
+        }}
         mt={3}
       >
         Clear Markers
