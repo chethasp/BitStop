@@ -73,18 +73,26 @@ def calculate_cost(routes, G):
     uncovered_nodes = set(G.nodes)  # Track all uncovered nodes, not just high-traffic nodes
     overlap_penalty = 0
 
+    total_nodes = len(G.nodes)
+    length_threshold = total_nodes / 5  # Define the length threshold
+
     for route in routes:
         # Calculate travel time for each route
         for i in range(len(route) - 1):
             # Check if the edge exists before accessing its weight
             if G.has_edge(route[i], route[i + 1]):
-                total_travel_time += G[route[i]][route[i + 1]]['weight']
+                travel_time = G[route[i]][route[i + 1]]['weight']
+                total_travel_time += travel_time ** 2  # Apply quadratic penalty for longer routes
             else:
                 # If the edge doesn't exist, you can either skip it or add a penalty
                 total_travel_time += float('inf')  # Add an infinite penalty for non-existing edges
 
         # Track covered nodes
         uncovered_nodes -= set(route)
+
+        # Penalize routes that are longer than the threshold
+        if len(route) > length_threshold:
+            total_travel_time += 100 * (len(route) - length_threshold)  # Apply a heavy penalty for exceeding threshold
 
     # Add overlap penalty
     all_visited_nodes = [node for route in routes for node in route]
@@ -96,53 +104,73 @@ def calculate_cost(routes, G):
     return cost
 
 
-# Step 4: Genetic Algorithm (GA)
+
 def genetic_algorithm(G, initial_routes, num_generations=100):
-    population = initial_routes
+    population = [initial_routes]
     population_size = len(initial_routes)
 
+    # Variable to store the best set of 5 routes and its cost
+    best_routes = initial_routes[:5]
+    best_cost = calculate_cost(best_routes, G)
+
     for generation in range(num_generations):
-        # Calculate fitness for each individual
-        fitness = [1 / calculate_cost([route], G) for route in population]
+        # Calculate fitness for each individual (i.e., the sum of costs of all routes)
+        fitness = [1 / calculate_cost(individual, G) for individual in population]
 
         # Ensure fitness list is not empty to avoid division by zero
         if sum(fitness) == 0:
             continue  # Skip this generation if fitness is zero for all
 
         # Selection: Select parents based on fitness
-        parents = random.choices(population, weights=fitness, k=min(population_size, 2))  # Select at most 2 parents
+        parents = random.choices(population, weights=fitness, k=min(population_size, 2))
 
-        # Crossover: Create new routes by combining parents
+        # Crossover: Create new individuals by combining parents
         offspring = []
         for i in range(0, len(parents), 2):
             if i + 1 < len(parents):
                 parent1, parent2 = parents[i], parents[i + 1]
-                
-                # Check if parents have more than one node
-                if len(parent1) > 1 and len(parent2) > 1:
-                    crossover_point = random.randint(1, min(len(parent1), len(parent2)) - 1)
-                    child = parent1[:crossover_point] + parent2[crossover_point:]
-                    offspring.append(child)
-                else:
-                    # If either parent has 1 node, just add them directly to offspring
-                    offspring.append(parent1)
-                    offspring.append(parent2)
+                child = []
+
+                # Create children by mixing routes from both parents
+                for route1, route2 in zip(parent1[:5], parent2[:5]):
+                    crossover_point = random.randint(1, min(len(route1), len(route2)) - 1)
+                    child_route = route1[:crossover_point] + route2[crossover_point:]
+                    child.append(child_route)
+
+                offspring.append(child)
 
         # Mutation: Randomly modify some routes
-        for route in offspring:
+        for individual in offspring:
             if random.random() < 0.1:  # Mutation probability
-                idx = random.randint(0, len(route) - 1)
-                new_node = random.choice(list(G.nodes))
-                route[idx] = new_node
+                route_idx = random.randint(0, len(individual) - 1)
+                route = individual[route_idx]
+                if len(route) > 0:
+                    idx = random.randint(0, len(route) - 1)
+                    new_node = random.choice(list(G.nodes))
+                    route[idx] = new_node
 
         # Update population
         population += offspring
-        population = sorted(population, key=lambda r: calculate_cost([r], G))[:population_size]
+        population = sorted(population, key=lambda r: calculate_cost(r[:5], G))[:population_size]
 
-    # Return the best routes
-    return sorted(population, key=lambda r: calculate_cost([r], G))[:5]
+        # Update the best set of 5 routes if a better one is found
+        current_best_routes = population[0][:5]
+        current_best_cost = calculate_cost(current_best_routes, G)
+        if current_best_cost < best_cost:
+            best_routes = current_best_routes
+            best_cost = current_best_cost
 
-def simulated_annealing(G, route, initial_temp=1000, cooling_rate=0.95, num_iterations=100):
+    # Print the best combination of 5 routes and their total cost
+    print(f"Best combination of 5 routes with minimum overall cost ({best_cost}):")
+    for idx, route in enumerate(best_routes):
+        route_cost = calculate_cost([route], G)
+        print(f"Route {idx + 1}: {route} | Cost: {route_cost}")
+
+    # Return the best set of 5 routes
+    return best_routes
+
+
+def simulated_annealing(G, route, initial_temp=1000, cooling_rate=0.97, num_iterations=100):
     current_route = route
     current_cost = calculate_cost([current_route], G)
     temp = initial_temp
@@ -209,16 +237,34 @@ def plot_routes(G, routes, venues):
     plt.axis('off')  # Hide axes for better visualization
     plt.show()
 
+def save_routes_to_csv(routes, venues, output_file='static/routes.csv'):
+    route_data = []
+
+    # Iterate over each route to extract latitude and longitude of nodes
+    for idx, route in enumerate(routes):
+        lat_long_str = []
+        for node in route:
+            latitude = venues.iloc[node]['latitude']
+            longitude = venues.iloc[node]['longitude']
+            lat_long_str.append(f"{latitude},{longitude}")
+
+        # Combine all latitude and longitude pairs into a single string for the route
+        route_str = ";".join(lat_long_str)
+        route_data.append({"route_number": idx + 1, "route_lat_long": route_str})
+
+    # Convert to DataFrame and save to CSV
+    df = pd.DataFrame(route_data)
+    df.to_csv(output_file, index=False)
+
+    print(f"Routes have been saved to {output_file}")
+
 if __name__ == "__main__":
     G, venues = create_graph()  # Get both graph and venues
     initial_routes = generate_initial_routes(G)
-    optimized_routes = optimize_routes(G, initial_routes)
-
-    # Print the optimized routes along with their costs
-    for idx, route in enumerate(optimized_routes):
-        route_cost = calculate_cost([route], G)  # Calculate the cost of the route
-        print(f"Route {idx + 1}: {route} | Cost: {route_cost}")
+    optimized_routes = genetic_algorithm(G, initial_routes)
 
     # Plot the optimized routes
     plot_routes(G, optimized_routes, venues)  # Pass venues to plotting function
 
+    # Save the latitude and longitude values of each node in a route to the specified CSV file
+    save_routes_to_csv(optimized_routes, venues, output_file='static/routes.csv')
