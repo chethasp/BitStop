@@ -90,6 +90,41 @@ export default function UserEntry({
           >
             {ctaText}
           </Button>
+
+      <Flex align="center" direction={{ base: "column", md: "row" }}>
+      <Stack spacing={4} w="100%">
+
+      <br></br>
+
+      <Heading
+          as="h1"
+          size="xl"
+          fontWeight="bold"
+          color="primary.800"
+          textAlign={["center", "center", "left", "left"]}
+          fontFamily={"Trebuchet MS"} 
+          letterSpacing={0.5}
+        >
+          Suggest a Stop
+        </Heading>
+          <Input placeholder="Email" />
+          <Input placeholder="Address of Stop" type="number"/>
+        
+        <Button
+            colorScheme="primary"
+            backgroundColor="green"
+            borderRadius="8px"
+            py="4"
+            px="4"
+            lineHeight="1"
+            size="md"
+            fontFamily={"Trebuchet MS"} 
+            letterSpacing={-0.5}
+          >
+            Submit
+          </Button>
+          </Stack>
+        </Flex>
       </Stack>
 
       <Box

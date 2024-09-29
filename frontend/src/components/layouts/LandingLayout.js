@@ -1,7 +1,15 @@
 import React from "react";
-import { Flex } from "@chakra-ui/react";
 import Header from "../sections/Header";
 import MapComponent from '../sections/MapComponent';
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  Input
+} from "@chakra-ui/react";
 
 
 export default function LandingLayout(props) {
@@ -17,7 +25,14 @@ export default function LandingLayout(props) {
       {props.children}
 
       <div>
-      <h1 color="green">Bus Routes</h1>
+      <Text as="h1"
+          size="xl"
+          fontWeight="bold"
+          color="primary.800"
+          textAlign={["center", "center", "left", "left"]}
+          fontFamily={"Trebuchet MS"} 
+          letterSpacing={-3}
+      >Bus Routes</Text>
       <MapComponent />
       </div>
 

@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Flex, Text, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  Input
+} from "@chakra-ui/react";
 
 const Header = (props) => {
   const [show, setShow] = React.useState(false);
