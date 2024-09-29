@@ -258,6 +258,14 @@ def save_routes_to_csv(routes, venues, output_file='static/routes.csv'):
 
     print(f"Routes have been saved to {output_file}")
 
+def get_routes():
+    G, venues = create_graph()  # Get both graph and venues
+    initial_routes = generate_initial_routes(G)
+    optimized_routes = genetic_algorithm(G, initial_routes)
+
+    # Save the latitude and longitude values of each node in a route to the specified CSV file
+    save_routes_to_csv(optimized_routes, venues, output_file='static/routes.csv')
+
 if __name__ == "__main__":
     G, venues = create_graph()  # Get both graph and venues
     initial_routes = generate_initial_routes(G)
