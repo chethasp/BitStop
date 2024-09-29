@@ -2,7 +2,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { GoogleMap, Marker, DirectionsRenderer, useJsApiLoader } from '@react-google-maps/api';
 import Papa from "papaparse";
 import footTrafficData from "../../files/foot_traffic_sites.csv"; 
-<<<<<<< Updated upstream
 import {
   Box,
   Button,
@@ -12,8 +11,6 @@ import {
   Text,
   Input
 } from "@chakra-ui/react";
-=======
->>>>>>> Stashed changes
 
 // Set the initial center of the map
 const center = {
