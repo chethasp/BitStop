@@ -1,6 +1,8 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 import Header from "../sections/Header";
+import MapComponent from '../sections/MapComponent';
+
 
 export default function LandingLayout(props) {
   return (
@@ -13,6 +15,13 @@ export default function LandingLayout(props) {
     >
       <Header />
       {props.children}
+
+      <div>
+      <h1 color="green">Bus Routes</h1>
+      <MapComponent />
+      </div>
+
     </Flex>
+    
   );
 }
