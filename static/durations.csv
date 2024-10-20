@@ -1,0 +1,191 @@
+venue_name1,venue_address1,latitude1,longitude1,venue_name2,venue_address2,latitude2,longitude2,Duration (minutes)
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,21
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,18
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,28
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,10
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,29
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,17
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,18
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,19
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,17
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,20
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,20
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,19
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,10
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,16
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,18
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,28
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,19
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,20
+Fernbank Museum | 3D Theater | Forest,"767 Clifton Rd N E, Atlanta, GA 30307",33.7739247,-84.3279985,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,14
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,3
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,17
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,8
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,21
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,13
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,2
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,17
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,4
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,11
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,2
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,15
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,13
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,2
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,10
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,16
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,10
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,4
+Georgia Aquarium,"225 Baker St NW, Atlanta, GA 30313",33.763382,-84.3951098,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,10
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,17
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,8
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,19
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,13
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,4
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,14
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,1
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,9
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,2
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,14
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,10
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,1
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,8
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,16
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,8
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,2
+Children's Museum of Atlanta,"275 Centennial Olympic Park Dr NW, Atlanta, GA 30313",33.7625707,-84.3917327,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,19
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,28
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,17
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,17
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,24
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,22
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,11
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,21
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,18
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,20
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,17
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,14
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,2
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,12
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,23
+Swan House at Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8404395,-84.3875917,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,19
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,20
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,15
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,11
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,14
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,11
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,12
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,13
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,16
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,7
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,11
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,12
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,19
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,11
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,12
+Jimmy Carter Presidential Library and Museum,"441 John Lewis Freedom Pkwy NE, Atlanta, GA 30307",33.7663441,-84.3562588,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,8
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,26
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,22
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,21
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,21
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,23
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,20
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,28
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,20
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,21
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,22
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,30
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,22
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,20
+Cascade Springs Nature Preserve,"2852 Cascade Rd, Atlanta, GA 30311",33.719509,-84.4812907,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,18
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,14
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,22
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,15
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,6
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,16
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,1
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,17
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,14
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,9
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,17
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,4
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,16
+Atlanta Botanical Garden,"1345 Piedmont Ave NE, Atlanta, GA 30309",33.7899568,-84.3725988,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,15
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,13
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,4
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,8
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,4
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,13
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,9
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,3
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,8
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,16
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,8
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,5
+Pemberton Place,"126 Ivan Allen Jr Blvd NW, Atlanta, GA 30308",33.763396,-84.3938264,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,15
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,15
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,14
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,20
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,8
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,12
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,15
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,23
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,15
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,14
+Grant Park,"840 Cherokee Ave SE, Atlanta, GA 30315",33.735704,-84.371164,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,10
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,2
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,15
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,8
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,3
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,9
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,17
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,9
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,1
+Fountain of Rings,"265 Park Ave W NW, Atlanta, GA 30313",33.759476,-84.392867,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,12
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,8
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,12
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,10
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,3
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,12
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,3
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,12
+Center For Puppetry Arts,"1404 Spring St NW, Atlanta, GA 30309",33.792875,-84.3898599,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,14
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,16
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,10
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,1
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,10
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,18
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,10
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,4
+Centennial Olympic Park,"Atlanta, GA 30313",33.760463,-84.3930831,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,10
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,18
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,15
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,10
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,18
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,5
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,17
+Piedmont Park,"Atlanta, GA 30309",33.7879265,-84.3721682,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,16
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,10
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,11
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,19
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,11
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,10
+Krog Street Tunnel,"1 Krog St NE, Atlanta, GA 30307",33.7529948,-84.3636479,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,4
+World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,8
+World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,16
+World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,8
+World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,2
+World of Coca-Cola,"121 Baker St NW, Atlanta, GA 30313",33.7625564,-84.392436,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
+"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,14
+"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,5
+"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,10
+"Millennium Gate Museum - History Art Museum Atlanta, Georgia | Classical Architecture","395 17th St NW, Atlanta, GA 30363",33.7911111,-84.3997222,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,10
+Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,13
+Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,23
+Atlanta History Center,"130 W Paces Ferry Rd NW, Atlanta, GA 30305",33.8418797,-84.3862534,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,26
+High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,14
+High Museum of Art,"1280 Peachtree Rd NE, Atlanta, GA 30309",33.7900632,-84.385552,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,13
+SkyView Atlanta,"168 Luckie St NW, Atlanta, GA 30303",33.7589378,-84.3916921,"Martin Luther King, Jr. National Historical Park","450 Auburn Ave NE, Atlanta, GA 30312",33.7566739,-84.3731798,9
