@@ -8,6 +8,7 @@ thanish_api_key2 = 'pri_b22c7fdcc1c64ffb81bc9365bbba2640'
 thanish_api_key3 = 'pri_632cd4c106bb49ecaf9cd44f616c7cc4'
 thanish_api_key4 = 'pri_93f8fa30e75c4464a21f573c02608c29'
 thanish_api_key5 = 'pri_a5e28de1eafb4c9bad6453f8913bad15'
+thanish_api_key6 = 'pri_334d05d02f2a4a2f85c61ec19395bfdd'
 
 def get_foot_traffic_sites(min_business, city, place_amt, api_key):
 
@@ -87,7 +88,7 @@ def get_foot_traffic_sites(min_business, city, place_amt, api_key):
     return result
 
 def get_sites(city, amount):
-    get_foot_traffic_sites(80, city, amount, thanish_api_key5)
+    get_foot_traffic_sites(80, city, amount, thanish_api_key6)
 
 if __name__ == '__main__':
     get_foot_traffic_sites(80, "Atlanta, Georgia", 10, thanish_api_key4)

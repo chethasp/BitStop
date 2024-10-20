@@ -5,7 +5,7 @@ from itertools import combinations
 
 def get_duration(lat1, lon1, lat2, lon2):
     api_url = 'https://api.distancematrix.ai/maps/api/distancematrix/json'
-    api_key = 'DZcaf2zo1KNABT0bTsx3bewSrOQRjprkbSXSMu2jqpxQXwdQy6aVtGV9yAzQqxmL'
+    api_key = 'JkLsmfBoO3sacD6dgWw11rVPpQnmnyHRxZhGJtha4K6kp4KtxAauCaUebbqT1eCz'
     params = {
         'origins': f'{lat1},{lon1}',
         'destinations': f'{lat2},{lon2}',
